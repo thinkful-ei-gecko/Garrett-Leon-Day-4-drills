@@ -31,12 +31,16 @@ function listenEvents() {
     if ($(this).attr('type') !== 'submit') {
       //check if it's a toggle class
       let closestSpan = $(this).closest('li').find('.shopping-item');
+      if (!$(this).hasClass('shopping-item-delete')) {
+        closestSpan.toggleClass('shopping-item__checked');
+      }
+      /*
       if (closestSpan.hasClass('shopping-item__checked') && !$(this).hasClass('shopping-item-delete')) {
         closestSpan.removeClass('shopping-item__checked');
       }
       else if (!closestSpan.hasClass('shopping-item-delete') && !$(this).hasClass('shopping-item-delete')) {
         closestSpan.addClass('shopping-item__checked');
-      }
+      }*/
       else {
         closestSpan.closest('li').remove();
       }
