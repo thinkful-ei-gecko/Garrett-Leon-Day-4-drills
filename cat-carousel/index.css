@@ -27,6 +27,6 @@ a.thumbnail:hover {
   box-shadow: 5px 5px 5px gray;
 }
 
-.thumbnail img {
+.thumbnail input {
   max-height: 100%;
 }
